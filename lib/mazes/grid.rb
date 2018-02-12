@@ -62,13 +62,14 @@ class Grid
     end
   end
 
+  # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
   def to_s
     output = "+" + "---+" * @columns + "\n"
     each_row do |row|
       top = "|"
       bottom = "+"
       row.each do |cell|
-        cell = Cell.new(-1, -1) unless cell
+        cell ||= Cell.new(-1, -1)
         body = "   " # 3 spaces
         east_bound = (cell.linked?(cell.east) ? " " : "|")
         top << body << east_bound
@@ -107,4 +108,5 @@ class Grid
 
     img
   end
+  # rubocop:enable Metrics/AbcSize, Metrics/MethodLength
 end
