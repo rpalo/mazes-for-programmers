@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative "../lib/mazes/grid"
-require_relative "../lib/mazes/algorithms/binary_tree"
+require "mazes/grid"
+require "mazes/algorithms/binary_tree"
 
 grid = Grid.new(4, 4)
 BinaryTree.on(grid)

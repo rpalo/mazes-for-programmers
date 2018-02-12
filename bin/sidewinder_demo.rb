@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "../lib/mazes/grid"
-require_relative "../lib/mazes/algorithms/sidewinder"
+require "mazes"
 
 grid = Grid.new(4, 4)
 Sidewinder.on(grid)
